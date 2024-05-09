@@ -1,0 +1,15 @@
+//Typography
+@use './base/typography';
+
+// resets
+@use './base/resets';
+@use './base/base';
+
+
+// COMPONENTS
+//// LAYOUT 
+@use './components/layout/header';
+@use './components/layout/main';
+
+// Banner
+@use './components/banner';
