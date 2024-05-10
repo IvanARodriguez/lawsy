@@ -2,6 +2,7 @@
 @use './base/typography';
 
 // resets
+@use './base/variables';
 @use './base/resets';
 @use './base/base';
 
@@ -10,6 +11,13 @@
 //// LAYOUT 
 @use './components/layout/header';
 @use './components/layout/main';
+@use './components/layout/footer';
 
 // Banner
 @use './components/banner';
+@use './components/services';
+@use './components/milestone';
+@use './components/servicepage';
+
+// Common
+@use './components/common/buttons';

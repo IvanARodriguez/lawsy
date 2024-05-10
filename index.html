@@ -14,16 +14,393 @@
 	</head>
 	<body>
 		<header id="header" class="header">
-			<div class="container">
-				<div class="logo">img</div>
+			<div class="container-fluid">
 				<nav class="nav">
-					<menu>
-						<li><a href="/pages/about.html">About</a></li>
-						<li><a href="/pages/project.html">Projects</a></li>
-						<li><a href="/pages/contact.html">Contact</a></li>
+					<menu class="sidebar">
+						<li onclick="hideSidebar()">
+							<a href="#"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="30px"
+									viewBox="0 -960 960 960"
+									width="30px"
+									fill="inherit"
+								>
+									<path
+										d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+									/></svg
+							></a>
+						</li>
+						<li class="selected-page"><a href="/">Inicio</a></li>
+						<li><a href="/pages/acerca.html">Acerca</a></li>
+						<li><a href="/pages/servicios.html">Servicios</a></li>
+						<li><a href="/pages/contacto.html">Contacto</a></li>
+					</menu>
+					<menu class="menu-items">
+						<li>
+							<a href="/"
+								><img
+									src="/assets/images/logo.webp"
+									alt="Lawsy Logo"
+									height="60"
+							/></a>
+						</li>
+						<li class="hideOnMobile selected-page">
+							<a href="/">Inicio</a>
+						</li>
+						<li class="hideOnMobile">
+							<a href="/pages/acerca.html">Acerca</a>
+						</li>
+						<li class="hideOnMobile">
+							<a href="/pages/servicios.html">Servicios</a>
+						</li>
+						<li class="hideOnMobile">
+							<a href="/pages/contacto.html">Contacto</a>
+						</li>
+						<li class="menu-button" onclick="showSidebar()">
+							<a href="#"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="30px"
+									viewBox="0 -960 960 960"
+									width="30px"
+									fill="inherit"
+								>
+									<path
+										d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"
+									/></svg
+							></a>
+						</li>
 					</menu>
 				</nav>
 			</div>
 		</header>
+		<main id="main" class="main">
+			<!-- Working Here -->
+			<section class="banner">
+				<div class="overlay"></div>
+				<div class="main-background"></div>
+				<div class="container">
+					<h1>
+						Gestiones Migratorias A Un Click
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							height="40px"
+							viewBox="0 -960 960 960"
+							width="40px"
+							fill="inherit"
+						>
+							<path
+								d="M468-240q-96-5-162-74t-66-166q0-100 70-170t170-70q97 0 166 66t74 162l-84-25q-13-54-56-88.5T480-640q-66 0-113 47t-47 113q0 57 34.5 100t88.5 56l25 84Zm48 158q-9 2-18 2h-18q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v18q0 9-2 18l-78-24v-12q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h12l24 78Zm305 22L650-231 600-80 480-480l400 120-151 50 171 171-79 79Z"
+							/>
+						</svg>
+					</h1>
+					<div class="world-map">
+						<img src="/assets/images/worldmap.png" alt="World Map" />
+						<a href="#usa" class="pin usa selected" onclick="showBody('usa')">
+							<span> Estados Unidos</span>
+						</a>
+						<a href="#canada" class="pin canada" onclick="showBody('canada')">
+							<span>Canada</span>
+						</a>
+						<a href="#china" class="pin china" onclick="showBody('china')">
+							<span>China</span>
+						</a>
+						<a href="#europa" class="pin europa" onclick="showBody('europa')">
+							<span>Europa</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="services">
+				<div class="container">
+					<div class="service-content">
+						<div class="panels active" id="usa">
+							<div class="l-panel">
+								<div class="place-title">
+									<img
+										src="/assets/images/usa.png"
+										height="40"
+										id="place-img"
+										alt="Place Image"
+									/>
+									<h3>Visas a Estados Unidos</h3>
+								</div>
+								<p>
+									Nuestro servicio de visas para Estados Unidos te ofrece
+									asesoramiento completo y asistencia en el proceso de obtención
+									de visas para viajar a los Estados Unidos. Desde visas de
+									turismo hasta visas de trabajo, estamos aquí para ayudarte en
+									cada paso del camino, asegurándonos de que tengas toda la
+									información y documentación necesarias para una experiencia
+									sin complicaciones en tu viaje a los Estados Unidos.
+								</p>
+								<a
+									target="_blank"
+									class="main-button"
+									href="https://wa.me/8298712080"
+								>
+									Solicitar mas información
+								</a>
+							</div>
+							<div class="r-panel">
+								<ul id="service-features">
+									<li>
+										Asesoramiento experto sobre los tipos de visas disponibles,
+										como turismo, trabajo, estudios, etc.
+									</li>
+									<li>
+										Asistencia en la preparación de documentos requeridos para
+										la solicitud de visa.
+									</li>
+									<li>Seguimiento personalizado del estado de la solicitud.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panels" id="canada">
+							<div class="l-panel">
+								<div class="place-title">
+									<img
+										src="/assets/images/canada.png"
+										class="place-img"
+										id="place-img"
+										alt="Place Image"
+									/>
+									<h3 id="service-title">Visas Canadienses</h3>
+								</div>
+								<p id="service-description">
+									Con nuestro servicio de visas para Canadá, te brindamos el
+									apoyo necesario para solicitar y obtener visas para viajar a
+									Canadá, ya sea para turismo, negocios, estudios o residencia
+									temporal. Desde la preparación de la solicitud hasta la
+									presentación de documentos, estamos aquí para guiarte a lo
+									largo de todo el proceso, asegurándonos de que tengas la
+									información y la asistencia necesarias para una experiencia de
+									viaje exitosa y sin complicaciones en Canadá.
+								</p>
+								<a
+									href="https://wa.me/8298712080"
+									target="_blank"
+									class="main-button"
+								>
+									Solicitar mas información
+								</a>
+							</div>
+							<div class="r-panel">
+								<ul id="service-features">
+									<li>
+										Asesoramiento sobre los programas de visa canadienses, como
+										visas de visitante, permisos de estudio, residencia
+										temporal, etc.
+									</li>
+									<li>
+										Ayuda en la preparación de la documentación requerida, como
+										pruebas de fondos financieros, cartas de aceptación, etc.
+									</li>
+									<li>
+										Orientación sobre los procesos de inmigración y las
+										políticas de visas en Canadá.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panels" id="china">
+							<div class="l-panel">
+								<div class="place-title">
+									<img
+										src="/assets/images/china.jpg"
+										class="place-img"
+										id="place-img"
+										alt="Place Image"
+									/>
+									<h3 id="service-title">Visa China</h3>
+								</div>
+								<p id="service-description">
+									Con nuestro servicio de visas para Canadá, te brindamos el
+									apoyo necesario para solicitar y obtener visas para viajar a
+									Canadá, ya sea para turismo, negocios, estudios o residencia
+									temporal. Desde la preparación de la solicitud hasta la
+									presentación de documentos, estamos aquí para guiarte a lo
+									largo de todo el proceso, asegurándonos de que tengas la
+									información y la asistencia necesarias para una experiencia de
+									viaje exitosa y sin complicaciones en Canadá.
+								</p>
+								<a
+									href="https://wa.me/8298712080"
+									target="_blank"
+									class="main-button"
+								>
+									Solicitar mas información
+								</a>
+							</div>
+							<div class="r-panel">
+								<ul id="service-features">
+									<li>
+										Asesoramiento sobre los diferentes tipos de visas chinas y
+										sus requisitos específicos
+									</li>
+									<li>
+										Ayuda en la preparación de documentos, incluidos itinerarios
+										de viaje y reservas de alojamiento.
+									</li>
+									<li>
+										Información sobre los tiempos de procesamiento y costos
+										asociados con las visas chinas.
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="panels" id="europa">
+							<div class="l-panel">
+								<div class="place-title">
+									<img
+										src="/assets/images/europe.svg	"
+										class="place-img"
+										id="place-img"
+										alt="Place Image"
+									/>
+									<h3 id="service-title">Visa Europea</h3>
+								</div>
+								<p id="service-description">
+									Con nuestro servicio de visas para Europa, te proporcionamos
+									la orientación y el apoyo necesarios para solicitar y obtener
+									visas para viajar a países europeos. Ya sea que estés
+									planeando unas vacaciones en Francia, un viaje de negocios a
+									Alemania o una aventura en Italia, estamos aquí para facilitar
+									el proceso de solicitud de visa, brindándote la asistencia que
+									necesitas para cumplir con todos los requisitos y regulaciones
+									de ingreso.
+								</p>
+								<a
+									target="_blank"
+									class="main-button"
+									href="https://wa.me/8298712080"
+								>
+									Solicitar mas información
+								</a>
+							</div>
+							<div class="r-panel">
+								<ul id="service-features">
+									<li>
+										Asesoramiento sobre los diferentes tipos de visas chinas y
+										sus requisitos específicos
+									</li>
+									<li>
+										Ayuda en la preparación de documentos, incluidos itinerarios
+										de viaje y reservas de alojamiento.
+									</li>
+									<li>
+										Información sobre los tiempos de procesamiento y costos
+										asociados con las visas chinas.
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="milestone">
+				<div class="container">
+					<div class="text">
+						<h2>Con éxito</h2>
+						<h3>Más De 1000 Visas aprobadas</h3>
+						<p>
+							Tenemos un extenso periodo de servicio que nos permite abordar con
+							experiencia la mayoría de situaciones de los solicitantes,
+							adaptándonos de forma proactiva a los nuevos cambios migratorios
+							de sus destinos.
+						</p>
+					</div>
+					<div class="service-features">
+						<div class="service_card">
+							<img src="imgs/turist.svg" alt="turist icon" />
+							<h3>Visas de Turista</h3>
+							<p>Viaja, explora y conoce tus destinos favoritos</p>
+						</div>
+						<div class="service_card">
+							<img src="imgs/work-icon.svg" alt="work icon" />
+							<h3>Visas para trabajar</h3>
+							<p>Trabaja legalmente mientras conoces lugares</p>
+						</div>
+						<div class="service_card">
+							<img src="imgs/student-icon.svg" alt="student icon" />
+							<h3>Visas de Estudios</h3>
+							<p>Mejora tu nivel académico en el exterior</p>
+						</div>
+						<div class="service_card">
+							<img src="imgs/fiancee.svg" alt="couple icon" />
+							<h3>Visas de Prometido</h3>
+							<p>Reúnete y cásate en el país de tu prometid@</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer_info container">
+				<div class="map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.896546388278!2d-69.8307944!3d18.4883447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf87174efd4983%3A0x4b72f55a95d7ab7c!2sLAWSY%20SOLUCIONES%20GLOBALES!5e0!3m2!1ses-419!2sdo!4v1687310497206!5m2!1ses-419!2sdo"
+						width="600"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+					></iframe>
+					<p>
+						Plaza Tito, Local 3A: Calle 1ra, La Esperanza, Santo Domingo Este
+					</p>
+				</div>
+				<div>
+					<h3>Horario</h3>
+					<ul>
+						<li>Lunes: 8:00 am - 4:00 pm</li>
+						<li>Martes: 8:00 am - 4:00 pm</li>
+						<li>Miércoles: 8:00 am - 4:00 pm</li>
+						<li>Jueves: 8:00 am - 4:00 pm</li>
+						<li>Viernes: 8:00 am - 4:00 pm</li>
+					</ul>
+				</div>
+				<div>
+					<div>
+						<img
+							class="logo"
+							src="/assets/images/logo.webp"
+							height="100px"
+							alt="Lawsy Logo"
+						/>
+						<div class="main_social">
+							<a href="https://wa.me/8298712080">
+								<img src="imgs/whatsapp-icon.svg" alt="whatsapp icon" />
+							</a>
+							<a href="https://www.instagram.com/lawsy_sg/?hl=es">
+								<img src="imgs/instagram-icon.svg" alt="instagram icon" />
+							</a>
+							<a href="tel:829-871-2080">
+								<img src="imgs/call-icon.svg" alt="PHONE icon" />
+							</a>
+							<a href="mailto:w.rodriguez@lawsysg.com">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									height="24px"
+									viewBox="0 -960 960 960"
+									width="24px"
+									fill="#e8eaed"
+								>
+									<path
+										d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<p id="trademark">
+							Lawsy Soluciones Globales &reg <span id="year"></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

@@ -1,0 +1,84 @@
+@import '../../base/variables';
+
+.header {
+  display: flex;
+  
+  .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    .nav {
+      flex-grow: 1;
+      background-color: white;
+      box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+      .menu-items {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .selected-page{
+          background-color: $main-color;
+          color: white !important;
+        }
+        .selected-page a:hover{
+          background-color: $main-color;
+          color: white !important;
+        }
+      }
+      li {
+        height: 50px;
+        a {
+          height: 100%;
+          padding: 0 30px;
+          display: flex;
+          align-items: center;
+          color: inherit;
+          transition: background-color .2s ease-in-out;
+        }
+        a:hover {
+          background-color: #f0f0f0;
+        }
+        
+      }
+      li:first-child{
+        margin-right: auto;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        min-height: 100vh;
+        min-width: 250px;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.564);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        li {
+          width: 100%;
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {display: block;}
+}
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
