@@ -1,0 +1,103 @@
+@import '../base/variables';
+
+.services {
+    .container {
+    h3 {
+      font-size: $size-2;
+    }
+    .service-content {
+      max-width: 100vw;
+      position: relative;
+      overflow-x: hidden;
+      padding: 2rem 1rem;
+      .panels {
+        opacity: 0;
+        flex-grow: 0;
+        position: absolute;
+        left: -999%;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+        padding: 1rem;
+        transition: left 0.5s ease-in-out;
+      }
+      .l-panel {
+        display: grid;
+        gap: 1.25rem;
+        .place-title{
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+          align-items: center;
+          padding-bottom: 1rem;
+          img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10rem;
+            object-fit: cover;
+            box-shadow: 3px 3px 5px rgba(31, 31, 31, 0.327);
+          }
+        }
+      }
+      
+      .r-panel{
+        max-width: 500px;
+        margin-top: 9rem;
+        ul {
+          display: grid;
+          height: 100%;
+          gap: .5rem;
+          li {
+            border-left: 2px solid $main-color;
+            border-radius: .1rem;
+            display: flex;
+            align-items: center;
+            padding: .5rem;
+            box-shadow: 3px 0 8px rgba(0, 0, 0, 0.117);
+          }
+        }
+      }
+    }
+    
+    .panels.active {
+      position: relative;
+      left: 0;
+      opacity: 1;
+      animation: fade linear both;
+      animation-timeline: view();
+      animation-range: entry 50% cover 50%;
+    }
+
+  } 
+}
+
+@media screen and (max-width: 1024px) {
+  .services {
+    .container {
+      .service-content {
+        .panels {
+          grid-template-columns: repeat(1, 1fr);
+          .l-panel {
+            max-width: 100%;
+          }
+          .r-panel{
+            max-width: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}

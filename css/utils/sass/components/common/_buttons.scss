@@ -1,0 +1,15 @@
+@import '../../base/variables';
+
+.main-button{
+  display: block;
+  padding: .8rem 1.25rem;
+  color: white;
+  background-color: $main-color;
+  border-radius: .5rem;
+  text-align: center;
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+.main-button:hover{
+  opacity: .7;
+}

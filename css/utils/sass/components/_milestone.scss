@@ -1,0 +1,74 @@
+@import '../base/variables';
+
+.milestone {
+  margin: 5rem auto;
+  .container{
+    display: grid;
+    gap: 3rem;
+    .text{
+      h2 {
+        font-size: $size-1;
+        text-align: center;
+        color: $main-color;
+      }
+      h3{
+        font-size: $size-2;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      p{
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    .service-features{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1.5rem;
+      .service_card{
+        text-align: center;
+        img{
+          height: 80px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .milestone{
+    margin: auto;
+    .container {
+      
+      .service-features{
+        grid-template-columns: 1fr 1fr;
+        .service_card {
+          img{
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+          @media screen and (max-width: 470px) {
+            .milestone{
+              margin: auto;
+              .container {
+          
+                .service-features{
+                  grid-template-columns: 1fr;
+                  .service_card {
+                    img{
+                      height: 40px;
+                      width: 40px;
+                    }
+                  }
+                }
+              }
+            }
+          }

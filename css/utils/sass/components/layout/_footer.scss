@@ -1,0 +1,31 @@
+footer {
+	background-color: #1a1d23;
+  color: white;
+	padding: 1rem ;
+  .main_social img {
+    width: 30px;
+    color: white;
+    transition: opacity 0.1s ease-in-out;
+  }
+  .footer_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .map iframe {
+    height: 200px;
+    width: 200px;
+    border-radius: 0.5rem;
+  }
+  
+  .map p {
+    max-width: 300px;
+  }
+  
+  li {
+    list-style: none;
+  }
+}
