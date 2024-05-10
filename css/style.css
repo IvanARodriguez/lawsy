@@ -42,6 +42,7 @@ button {
 
 .container {
   max-width: 1024px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -103,7 +104,7 @@ button {
   min-height: 100vh;
   min-width: 250px;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.564);
+  background-color: rgba(255, 255, 255, 0.893);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
@@ -512,7 +513,7 @@ footer li {
 
 /* Estilos para dispositivos pequeños */
 @media only screen and (max-width: 600px) {
-  .container {
+  .service-main .container {
     margin: 20px;
     padding: 10px;
   }

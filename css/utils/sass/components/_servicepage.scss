@@ -94,9 +94,12 @@
 }
 /* Estilos para dispositivos pequeños */
 @media only screen and (max-width: 600px) {
-  .container {
-      margin: 20px;
-      padding: 10px;
+  .service-main{
+
+    .container {
+        margin: 20px;
+        padding: 10px;
+    }
   }
 }
 /* Estilos para la imagen */
