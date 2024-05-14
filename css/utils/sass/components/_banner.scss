@@ -60,16 +60,17 @@
         object-fit: contain;
       }
       .pin {
-        background-color: #4362f8;
+        background-color: #9a2626;
         position: absolute;
         border-radius: 50%;
         width: 0.7rem;
         height: 0.7rem;
+        animation: pulse ease-in-out infinite;
       }
       
       .pin::before{
         content: '';
-        background: #4362f8;
+        background: #9a2626;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -111,15 +112,41 @@
         left: 15%;
       }
       .europa {
-        top: 43%;
+        top: 40%;
         left: 55%;
+      }
+      .netherlands {
+        top: 44%;
+        left: 46%;
       }
       .china {
         top: 50%;
         left: 75%;
       }
+      .chile {
+        top: 79%;
+        left: 27.5%;
+      }
+      .argentina {
+        top: 83%;
+        left: 28.5%;
+      }
+      .dominican {
+        top: 59.5%;
+        left: 26.8%;
+      }
 
     }
 
+  }
+}
+
+
+@keyframes pulse {
+  100% {
+    opacity: 0;
+    transform: 
+      translate(-50%, -50%)
+      scale(2.5);
   }
 }

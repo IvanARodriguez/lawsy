@@ -2,8 +2,11 @@
 
 .main-button{
   display: block;
+  width: fit-content;
+  margin: 0 auto;
   padding: .8rem 1.25rem;
   color: white;
+  grid-column: span 2;
   background-color: $main-color;
   border-radius: .5rem;
   text-align: center;
@@ -12,4 +15,12 @@
 }
 .main-button:hover{
   opacity: .7;
+}
+
+@media screen and (max-width: 950px) {
+  
+  .main-button {
+    grid-column: span 1;
+  }
+  
 }
