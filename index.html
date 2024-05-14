@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="icon" type="image/x-icon" href="imgs/favicon/favicon.ico" />
 		<meta
 			name="description"
@@ -24,7 +24,7 @@
 									height="30px"
 									viewBox="0 -960 960 960"
 									width="30px"
-									fill="inherit"
+									fill="#fff"
 								>
 									<path
 										d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
@@ -82,7 +82,7 @@
 				<div class="main-background"></div>
 				<div class="container">
 					<h1>
-						Gestiones Migratorias A Un Click
+						Selecciona Un Destino
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							height="40px"
@@ -109,6 +109,30 @@
 						<a href="#europa" class="pin europa" onclick="showBody('europa')">
 							<span>Europa</span>
 						</a>
+						<a
+							href="#netherlands"
+							class="pin netherlands"
+							onclick="showBody('netherlands')"
+						>
+							<span>Países Bajos</span>
+						</a>
+						<a href="#chile" class="pin chile" onclick="showBody('chile')">
+							<span>Chile</span>
+						</a>
+						<a
+							href="#argentina"
+							class="pin argentina"
+							onclick="showBody('argentina')"
+						>
+							<span>Argentina</span>
+						</a>
+						<a
+							href="#dominican"
+							class="pin dominican"
+							onclick="showBody('dominican')"
+						>
+							<span>Republica Dominicana</span>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -116,16 +140,16 @@
 				<div class="container">
 					<div class="service-content">
 						<div class="panels active" id="usa">
+							<div class="place-title">
+								<img
+									src="/assets/images/usa.png"
+									height="40"
+									id="place-img"
+									alt="Place Image"
+								/>
+								<h3>Visas a Estados Unidos</h3>
+							</div>
 							<div class="l-panel">
-								<div class="place-title">
-									<img
-										src="/assets/images/usa.png"
-										height="40"
-										id="place-img"
-										alt="Place Image"
-									/>
-									<h3>Visas a Estados Unidos</h3>
-								</div>
 								<p>
 									Nuestro servicio de visas para Estados Unidos te ofrece
 									asesoramiento completo y asistencia en el proceso de obtención
@@ -135,39 +159,60 @@
 									información y documentación necesarias para una experiencia
 									sin complicaciones en tu viaje a Estados Unidos.
 								</p>
-								<a
-									target="_blank"
-									class="main-button"
-									href="https://wa.me/8298712080"
-								>
-									Solicitar mas información
-								</a>
 							</div>
 							<div class="r-panel">
 								<ul id="service-features">
 									<li>
-										Asesoramiento experto sobre los tipos de visas disponibles,
-										como turismo, trabajo, estudios, etc.
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
+										<p>
+											Asesoramiento experto sobre los tipos de visas
+											disponibles, como turismo, trabajo, estudios, etc.
+										</p>
 									</li>
 									<li>
-										Asistencia en la preparación de documentos requeridos para
-										la solicitud de visa.
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
+										<p>
+											Asistencia en la preparación de documentos requeridos para
+											la solicitud de visa.
+										</p>
 									</li>
-									<li>Seguimiento personalizado del estado de la solicitud.</li>
+									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
+										<p>Seguimiento personalizado del estado de la solicitud.</p>
+									</li>
 								</ul>
 							</div>
+							<a
+								target="_blank"
+								class="main-button"
+								href="https://wa.me/message/YUVWBEXURGCOJ1"
+							>
+								Solicitar mas información
+							</a>
 						</div>
 						<div class="panels" id="canada">
+							<div class="place-title">
+								<img
+									src="/assets/images/canada.png"
+									class="place-img"
+									id="place-img"
+									alt="Place Image"
+								/>
+								<h3 id="service-title">Visas Canadienses</h3>
+							</div>
 							<div class="l-panel">
-								<div class="place-title">
-									<img
-										src="/assets/images/canada.png"
-										class="place-img"
-										id="place-img"
-										alt="Place Image"
-									/>
-									<h3 id="service-title">Visas Canadienses</h3>
-								</div>
 								<p id="service-description">
 									Con nuestro servicio de visas para Canadá, te brindamos el
 									apoyo necesario para solicitar y obtener visas para viajar a
@@ -178,89 +223,120 @@
 									información y la asistencia necesarias para una experiencia de
 									viaje exitosa y sin complicaciones en Canadá.
 								</p>
-								<a
-									href="https://wa.me/8298712080"
-									target="_blank"
-									class="main-button"
-								>
-									Solicitar mas información
-								</a>
 							</div>
 							<div class="r-panel">
 								<ul id="service-features">
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Asesoramiento sobre los programas de visa canadienses, como
 										visas de visitante, permisos de estudio, residencia
 										temporal, etc.
 									</li>
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Ayuda en la preparación de la documentación requerida, como
 										pruebas de fondos financieros, cartas de aceptación, etc.
 									</li>
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Orientación sobre los procesos de inmigración y las
 										políticas de visas en Canadá.
 									</li>
 								</ul>
 							</div>
+							<a
+								href="https://wa.me/message/YUVWBEXURGCOJ1"
+								target="_blank"
+								class="main-button"
+							>
+								Solicitar mas información
+							</a>
 						</div>
 						<div class="panels" id="china">
+							<div class="place-title">
+								<img
+									src="/assets/images/china.jpg"
+									class="place-img"
+									id="place-img"
+									alt="Place Image"
+								/>
+								<h3 id="service-title">Visa China</h3>
+							</div>
 							<div class="l-panel">
-								<div class="place-title">
-									<img
-										src="/assets/images/china.jpg"
-										class="place-img"
-										id="place-img"
-										alt="Place Image"
-									/>
-									<h3 id="service-title">Visa China</h3>
-								</div>
 								<p id="service-description">
-									Con nuestro servicio de visas para Canadá, te brindamos el
-									apoyo necesario para solicitar y obtener visas para viajar a
-									Canadá, ya sea para turismo, negocios, estudios o residencia
-									temporal. Desde la preparación de la solicitud hasta la
-									presentación de documentos, estamos aquí para guiarte a lo
-									largo de todo el proceso, asegurándonos de que tengas la
-									información y la asistencia necesarias para una experiencia de
-									viaje exitosa y sin complicaciones en Canadá.
+									Nuestro servicio de visas para China está diseñado para
+									simplificar el proceso de obtención de visas para viajar a
+									este fascinante país. Desde la solicitud hasta la obtención de
+									la visa, te ofrecemos asesoramiento experto y asistencia
+									personalizada para garantizar que tu viaje a China sea lo más
+									suave posible. Ya sea que estés planeando explorar los
+									antiguos templos de Pekín, caminar por la Gran Muralla o
+									descubrir la bulliciosa vida urbana de Shanghái, estamos aquí
+									para ayudarte a hacer realidad tu viaje a China.
 								</p>
-								<a
-									href="https://wa.me/8298712080"
-									target="_blank"
-									class="main-button"
-								>
-									Solicitar mas información
-								</a>
 							</div>
 							<div class="r-panel">
 								<ul id="service-features">
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Asesoramiento sobre los diferentes tipos de visas chinas y
 										sus requisitos específicos
 									</li>
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Ayuda en la preparación de documentos, incluidos itinerarios
 										de viaje y reservas de alojamiento.
 									</li>
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Información sobre los tiempos de procesamiento y costos
 										asociados con las visas chinas.
 									</li>
 								</ul>
 							</div>
+							<a
+								href="https://wa.me/message/YUVWBEXURGCOJ1"
+								target="_blank"
+								class="main-button"
+							>
+								Solicitar mas información
+							</a>
 						</div>
 						<div class="panels" id="europa">
+							<div class="place-title">
+								<img
+									src="/assets/images/europe.svg	"
+									class="place-img"
+									id="place-img"
+									alt="Place Image"
+								/>
+								<h3 id="service-title">Visa Europea</h3>
+							</div>
 							<div class="l-panel">
-								<div class="place-title">
-									<img
-										src="/assets/images/europe.svg	"
-										class="place-img"
-										id="place-img"
-										alt="Place Image"
-									/>
-									<h3 id="service-title">Visa Europea</h3>
-								</div>
 								<p id="service-description">
 									Con nuestro servicio de visas para Europa, te proporcionamos
 									la orientación y el apoyo necesarios para solicitar y obtener
@@ -271,29 +347,294 @@
 									necesitas para cumplir con todos los requisitos y regulaciones
 									de ingreso.
 								</p>
-								<a
-									target="_blank"
-									class="main-button"
-									href="https://wa.me/8298712080"
-								>
-									Solicitar mas información
-								</a>
 							</div>
 							<div class="r-panel">
 								<ul id="service-features">
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Orientación sobre los requisitos específicos de visa para
 										cada país europeo.
 									</li>
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Asistencia en la preparación de la documentación necesaria,
 										como cartas de invitación, reservas de alojamiento, etc.
 									</li>
 									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
 										Apoyo en la gestión de citas para entrevistas consulares, si
 										es necesario.
 									</li>
 								</ul>
+							</div>
+							<a
+								target="_blank"
+								class="main-button"
+								href="https://wa.me/message/YUVWBEXURGCOJ1"
+							>
+								Solicitar mas información
+							</a>
+						</div>
+						<div class="panels" id="chile">
+							<div class="place-title">
+								<img
+									src="/assets/images/chile.jpg"
+									class="place-img"
+									id="place-img"
+									alt="Chile flag image"
+								/>
+								<h3 id="service-title">Visa para Chile</h3>
+							</div>
+							<div class="l-panel">
+								<p id="service-description">
+									Con nuestro servicio de visas para Chile, te proporcionamos la
+									orientación y el apoyo necesarios para solicitar y obtener
+									visas para viajar a este hermoso país sudamericano. Ya sea que
+									estés planeando unas vacaciones en la Patagonia, un viaje de
+									negocios a Santiago o una aventura en el desierto de Atacama,
+									estamos aquí para facilitar el proceso de solicitud de visa,
+									brindándote la asistencia que necesitas para cumplir con todos
+									los requisitos y regulaciones de ingreso.
+								</p>
+							</div>
+							<div class="r-panel">
+								<ul id="service-features">
+									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
+										Orientación sobre los requisitos específicos de visa para
+										ingresar a Chile.
+									</li>
+									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
+										Asistencia en la preparación de la documentación necesaria,
+										como cartas de invitación, reservas de alojamiento, etc.
+									</li>
+									<li>
+										<img
+											src="/assets/icons/verified.svg"
+											alt="verified icon"
+											height="30px"
+										/>
+										Apoyo en la gestión de citas para entrevistas consulares, si
+										es necesario.
+									</li>
+								</ul>
+							</div>
+							<a
+								target="_blank"
+								class="main-button"
+								href="https://wa.me/message/YUVWBEXURGCOJ1"
+							>
+								Solicitar más información
+							</a>
+						</div>
+						<div class="panels" id="netherlands">
+							<div class="place-title">
+								<img
+									src="/assets/images/netherlands.png"
+									class="place-img"
+									id="place-img"
+									alt="Netherlands flag image"
+								/>
+								<h3 id="service-title">Visa para los Países Bajos</h3>
+							</div>
+							<div class="l-panel">
+								<p id="service-description">
+									Con nuestro servicio de visa para los Países Bajos, te
+									proporcionamos la orientación y el apoyo necesarios para
+									solicitar y obtener visas para viajar a este encantador
+									destino europeo. Ya sea que estés planeando unas vacaciones en
+									Ámsterdam, un viaje de negocios a Róterdam o explorar los
+									campos de tulipanes en Keukenhof, estamos aquí para facilitar
+									el proceso de solicitud de visa, brindándote la asistencia que
+									necesitas para cumplir con todos los requisitos y regulaciones
+									de entrada.
+								</p>
+								<div class="r-panel">
+									<ul id="service-features">
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Orientación sobre los requisitos específicos de visa para
+											ingresar a los Países Bajos.
+										</li>
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Asistencia en la preparación de la documentación
+											necesaria, como cartas de invitación, reservas de
+											alojamiento, etc.
+										</li>
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Apoyo en la programación de citas para entrevistas
+											consulares, si es necesario.
+										</li>
+									</ul>
+								</div>
+								<a
+									target="_blank"
+									class="main-button"
+									href="https://wa.me/message/YUVWBEXURGCOJ1"
+								>
+									Request more information
+								</a>
+							</div>
+						</div>
+						<div class="panels" id="argentina">
+							<div class="place-title">
+								<img
+									src="/assets/images/argentina.png"
+									class="place-img"
+									id="place-img"
+									alt="Bandera de Argentina"
+								/>
+								<h3 id="service-title">Visa para Argentina</h3>
+							</div>
+							<div class="l-panel">
+								<p id="service-description">
+									Con nuestro servicio de visa para Argentina, te brindamos la
+									guía y el respaldo necesarios para solicitar y obtener visas
+									para viajar a este fascinante destino sudamericano. Ya sea que
+									estés planeando unas vacaciones en Buenos Aires, un viaje de
+									negocios a Córdoba o explorar la majestuosidad de las
+									Cataratas del Iguazú, estamos aquí para simplificar el proceso
+									de solicitud de visa, ofreciéndote la asistencia que requieres
+									para cumplir con todos los requisitos y regulaciones de
+									ingreso.
+								</p>
+								<div class="r-panel">
+									<ul id="service-features">
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Orientación sobre los requisitos específicos de visa para
+											ingresar a Argentina.
+										</li>
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Asistencia en la preparación de la documentación
+											necesaria, como cartas de invitación, reservas de
+											alojamiento, etc.
+										</li>
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Apoyo en la programación de citas para entrevistas
+											consulares, si es necesario.
+										</li>
+									</ul>
+								</div>
+								<a
+									target="_blank"
+									class="main-button"
+									href="https://wa.me/message/YUVWBEXURGCOJ1"
+								>
+									Solicitar más información
+								</a>
+							</div>
+						</div>
+						<div class="panels" id="dominican">
+							<div class="place-title">
+								<img
+									src="/assets/images/dominican.png"
+									class="place-img"
+									id="place-img"
+									alt="Bandera de la República Dominicana"
+								/>
+								<h3 id="service-title">Visa para República Dominicana</h3>
+							</div>
+							<div class="l-panel">
+								<p id="service-description">
+									Con nuestro servicio de visa para la República Dominicana, te
+									ofrecemos la orientación y el respaldo necesarios para
+									solicitar y obtener visas para viajar a este hermoso destino
+									caribeño. Ya sea que estés planeando unas vacaciones en Punta
+									Cana, un viaje de negocios a Santo Domingo o explorar las
+									playas vírgenes de Samaná, estamos aquí para simplificar el
+									proceso de solicitud de visa, brindándote la asistencia que
+									necesitas para cumplir con todos los requisitos y regulaciones
+									de ingreso.
+								</p>
+								<div class="r-panel">
+									<ul id="service-features">
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Orientación sobre los requisitos específicos de visa para
+											ingresar a la República Dominicana.
+										</li>
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Asistencia en la preparación de la documentación
+											necesaria, como cartas de invitación, reservas de
+											alojamiento, etc.
+										</li>
+										<li>
+											<img
+												src="/assets/icons/verified.svg"
+												alt="ícono verificado"
+												height="30px"
+											/>
+											Apoyo en la programación de citas para entrevistas
+											consulares, si es necesario.
+										</li>
+									</ul>
+								</div>
+								<a
+									target="_blank"
+									class="main-button"
+									href="https://wa.me/message/YUVWBEXURGCOJ1"
+								>
+									Solicitar más información
+								</a>
 							</div>
 						</div>
 					</div>
@@ -372,7 +713,7 @@
 							alt="Lawsy Logo"
 						/>
 						<div class="main_social">
-							<a href="https://wa.me/8298712080">
+							<a href="https://wa.me/message/YUVWBEXURGCOJ1">
 								<img src="imgs/whatsapp-icon.svg" alt="whatsapp icon" />
 							</a>
 							<a href="https://www.instagram.com/lawsy_sg/?hl=es">

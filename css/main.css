@@ -92,7 +92,7 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 .header .container-fluid .nav li a:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.4196078431);
 }
 .header .container-fluid .nav li:first-child {
   margin-right: auto;
@@ -104,8 +104,10 @@ button {
   min-height: 100vh;
   min-width: 250px;
   z-index: 999;
-  background-color: rgba(255, 255, 255, 0.893);
-  backdrop-filter: blur(10px);
+  background-color: rgb(33, 31, 31);
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
@@ -166,6 +168,7 @@ footer li {
 }
 
 .banner {
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1.25rem, 4vw, 1.25rem);
@@ -211,6 +214,7 @@ footer li {
   text-align: center;
 }
 .banner .container .world-map {
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   z-index: 8;
@@ -223,18 +227,20 @@ footer li {
   max-height: 700px;
   margin: 0 auto;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .banner .container .world-map .pin {
-  background-color: #4362f8;
+  background-color: #9a2626;
   position: absolute;
   border-radius: 50%;
   width: 0.7rem;
   height: 0.7rem;
+  animation: pulse ease-in-out infinite;
 }
 .banner .container .world-map .pin::before {
   content: "";
-  background: #4362f8;
+  background: #9a2626;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -255,6 +261,7 @@ footer li {
   background: #2b2b2b;
   color: #fff;
   border-radius: 3rem;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 0.3rem 0.6rem;
   font-size: clamp(12px, 0.5vw, 20px);
@@ -275,14 +282,36 @@ footer li {
   left: 15%;
 }
 .banner .container .world-map .europa {
-  top: 43%;
+  top: 40%;
   left: 55%;
+}
+.banner .container .world-map .netherlands {
+  top: 44%;
+  left: 46%;
 }
 .banner .container .world-map .china {
   top: 50%;
   left: 75%;
 }
+.banner .container .world-map .chile {
+  top: 79%;
+  left: 27.5%;
+}
+.banner .container .world-map .argentina {
+  top: 83%;
+  left: 28.5%;
+}
+.banner .container .world-map .dominican {
+  top: 59.5%;
+  left: 26.8%;
+}
 
+@keyframes pulse {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
 .services .container h3 {
   font-size: clamp(1.25rem, 4vw, 2.25rem);
 }
@@ -303,40 +332,42 @@ footer li {
   padding: 1rem;
   transition: left 0.5s ease-in-out;
 }
-.services .container .service-content .l-panel {
-  display: grid;
-  gap: 1.25rem;
-}
-.services .container .service-content .l-panel .place-title {
+.services .container .service-content .place-title {
+  grid-column: span 2;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
   padding-bottom: 1rem;
 }
-.services .container .service-content .l-panel .place-title img {
+.services .container .service-content .place-title img {
   width: 60px;
   height: 60px;
   border-radius: 10rem;
-  object-fit: cover;
-  box-shadow: 3px 3px 5px rgba(31, 31, 31, 0.327);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.services .container .service-content .l-panel {
+  display: grid;
+  gap: 1.25rem;
 }
 .services .container .service-content .r-panel {
   max-width: 500px;
-  margin-top: 9rem;
+}
+.services .container .service-content .r-panel .service-description {
+  text-align: justify;
 }
 .services .container .service-content .r-panel ul {
   display: grid;
-  height: 100%;
   gap: 0.5rem;
 }
 .services .container .service-content .r-panel ul li {
-  border-left: 2px solid #4362f8;
-  border-radius: 0.1rem;
+  display: flex;
+  gap: 0.5rem;
+  box-shadow: none;
   display: flex;
   align-items: center;
-  padding: 0.5rem;
-  box-shadow: 3px 0 8px rgba(0, 0, 0, 0.117);
 }
 .services .container .panels.active {
   position: relative;
@@ -347,9 +378,12 @@ footer li {
   animation-range: entry 50% cover 50%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 950px) {
   .services .container .service-content .panels {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .services .container .service-content .panels .place-title {
+    grid-column: span 1;
   }
   .services .container .service-content .panels .l-panel {
     max-width: 100%;
@@ -453,6 +487,7 @@ footer li {
   font-size: clamp(1.25rem, 4vw, 4.25rem);
   margin-bottom: 2rem;
   color: #333;
+  width: -moz-fit-content;
   width: fit-content;
   border-bottom: 3px groove #4362f8;
 }
@@ -532,8 +567,12 @@ footer li {
 
 .main-button {
   display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
   padding: 0.8rem 1.25rem;
   color: white;
+  grid-column: span 2;
   background-color: #4362f8;
   border-radius: 0.5rem;
   text-align: center;
@@ -545,4 +584,8 @@ footer li {
   opacity: 0.7;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 950px) {
+  .main-button {
+    grid-column: span 1;
+  }
+}/*# sourceMappingURL=main.css.map */
