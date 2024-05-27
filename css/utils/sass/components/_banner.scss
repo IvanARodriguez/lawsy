@@ -117,14 +117,16 @@
         left: 55%;
       }
       .united-kingdom {
-        top: 40%;
+        top: 38%;
         left: 46%;
-        transform: rotate(-24deg);
+        span {
+          transform: translateX(-115%) translateY(-15px);
+        }
       }
       .netherlands {
         top: 44%;
         left: 46%;
-        transform: rotate(20deg);
+        
       }
       .china {
         top: 50%;
@@ -133,12 +135,13 @@
       .chile {
         top: 79%;
         left: 27.5%;
-        transform: rotate(-20deg);
+        span {
+          transform: translateX(-130%) translateY(-15px);
+        }
       }
       .argentina {
         top: 83%;
         left: 28.5%;
-        transform: rotate(20deg);
       }
       .dominican {
         top: 59.5%;
