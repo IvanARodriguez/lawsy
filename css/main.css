@@ -287,14 +287,15 @@ footer li {
   left: 55%;
 }
 .banner .container .world-map .united-kingdom {
-  top: 40%;
+  top: 38%;
   left: 46%;
-  transform: rotate(-24deg);
+}
+.banner .container .world-map .united-kingdom span {
+  transform: translateX(-115%) translateY(-15px);
 }
 .banner .container .world-map .netherlands {
   top: 44%;
   left: 46%;
-  transform: rotate(20deg);
 }
 .banner .container .world-map .china {
   top: 50%;
@@ -303,12 +304,13 @@ footer li {
 .banner .container .world-map .chile {
   top: 79%;
   left: 27.5%;
-  transform: rotate(-20deg);
+}
+.banner .container .world-map .chile span {
+  transform: translateX(-130%) translateY(-15px);
 }
 .banner .container .world-map .argentina {
   top: 83%;
   left: 28.5%;
-  transform: rotate(20deg);
 }
 .banner .container .world-map .dominican {
   top: 59.5%;
@@ -616,7 +618,7 @@ footer li {
   color: white;
   padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1.25rem, 4vw, 1.25rem) clamp(1.25rem, 4vw, 4.25rem);
   background: rgb(131, 58, 180);
-  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(58, 123, 180) 0%, rgb(156, 29, 253) 50%, rgb(0, 43, 235) 100%);
 }
 .main-page-congress .container {
   text-align: center;
@@ -624,10 +626,8 @@ footer li {
   gap: clamp(1.25rem, 4vw, 1.25rem);
 }
 .main-page-congress .container .alianza {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   gap: 1rem;
 }
 .main-page-congress .container h2 {
@@ -692,6 +692,148 @@ footer li {
 @media screen and (max-width: 640px) {
   .main-page-congress .container .congresses {
     grid-template-columns: 1fr;
+  }
+}
+.dream-big {
+  padding: 1rem;
+  margin: clamp(1.25rem, 4vw, 4.25rem) auto;
+}
+.dream-big .dream-big-text h2 {
+  color: #4362f8;
+  font-weight: bolder;
+  font-size: clamp(1rem, 10vw, 1.2rem);
+}
+.dream-big .dream-big-text h3 {
+  font-size: clamp(1.5rem, 10vw, 1.7rem);
+}
+.dream-big .dream-big-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 4vw, 1.25rem);
+}
+.dream-big .dream-big-content .dream-big-banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dream-big .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dream-big .container .slider-container {
+  position: relative;
+}
+.dream-big .container .slider-container .slide-button {
+  height: 50px;
+  top: 50%;
+  width: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  border: nones;
+  position: absolute;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.dream-big .container .slider-container .slide-button:hover {
+  background-color: #444;
+}
+.dream-big .container .slider-container .slide-button#prev-slide {
+  left: 0px;
+  display: none;
+}
+.dream-big .container .slider-container .slide-button#next-slide {
+  right: 0px;
+}
+.dream-big .container .slider-container .image-list {
+  margin-bottom: 30px;
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 1.25rem);
+  overflow-x: auto;
+  scrollbar-width: none;
+  grid-template-columns: repeat(6, 1fr);
+}
+.dream-big .container .slider-container .image-list ::-webkit-scrollbar {
+  display: none;
+}
+.dream-big .container .slider-container .image-list .image-item {
+  border-radius: 0.2rem;
+  max-width: 340px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 2px 2px 5px grey;
+}
+.dream-big .container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.5s ease-in-out;
+}
+.dream-big .container .slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+.dream-big .container .slider-scrollbar .scrollbar-track {
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 6px;
+}
+.dream-big .container .slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  border-radius: inherit;
+  cursor: grab;
+}
+.dream-big .container .slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.dream-big .container .slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+@media screen and (max-width: 1023px) {
+  .slider-container .slide-button {
+    display: none !important;
+  }
+  .slider-container .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .slider-container .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .dream-big .dream-big-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(1.25rem, 4vw, 1.25rem);
+  }
+  .dream-big .dream-big-content img {
+    width: 100%;
+  }
+  .dream-big .dream-big-content .dream-big-banner {
+    overflow: hidden;
   }
 }
 .main-button {

@@ -1,0 +1,155 @@
+@import '../base/variables';
+
+.dream-big {
+	padding: 1rem;
+	margin: $size-3 auto;
+	.dream-big-text {
+		h2 {
+			color: $main-color;
+			font-weight: bolder;
+			font-size: clamp(1rem, 10vw, 1.2rem);
+		}
+		h3 {
+			font-size: clamp(1.5rem, 10vw, 1.7rem);
+		}
+	}
+	.dream-big-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: $size-1;
+		.dream-big-banner {
+			width: 100%;
+			overflow: hidden;
+		}
+	}
+}
+.dream-big {
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		.slider-container {
+			position: relative;
+			.slide-button {
+				height: 50px;
+				top: 50%;
+				width: 50px;
+				background-color: #000;
+				border-radius: 50%;
+				display: grid;
+				place-content: center;
+				place-items: center;
+				border: nones;
+				position: absolute;
+				cursor: pointer;
+				transform: translateY(-50%);
+				&:hover {
+					background-color: #444;
+				}
+				&#prev-slide {
+					left: 0px;
+					display: none;
+				}
+				&#next-slide {
+					right: 0px;
+				}
+			}
+			.image-list {
+				margin-bottom: 30px;
+				display: grid;
+				gap: $size-1;
+				overflow-x: auto;
+				scrollbar-width: none;
+				grid-template-columns: repeat(6, 1fr);
+				::-webkit-scrollbar {
+					display: none;
+				}
+				.image-item {
+					border-radius: 0.2rem;
+					max-width: 340px;
+					height: 400px;
+					object-fit: cover;
+					box-shadow: 2px 2px 5px grey;
+				}
+			}
+		}
+
+		.slider-scrollbar {
+			&:hover .scrollbar-track {
+				height: 4px;
+			}
+			height: 24px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: height 0.5s ease-in-out;
+			.scrollbar-track {
+				height: 2px;
+				width: 100%;
+				background-color: #ccc;
+				position: relative;
+				border-radius: 6px;
+			}
+			.scrollbar-thumb {
+				&:active {
+					cursor: grabbing;
+					height: 8px;
+					top: -2px;
+				}
+				position: absolute;
+				height: 100%;
+				width: 50%;
+				background-color: #000;
+				border-radius: inherit;
+				cursor: grab;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: -10px;
+					bottom: -10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.slider-container {
+		.slide-button {
+			display: none !important;
+		}
+
+		.image-list {
+			gap: 10px;
+			margin-bottom: 15px;
+			.image-item {
+				width: 280px;
+				height: 380px;
+			}
+		}
+	}
+
+	.slider-scrollbar {
+		.scrollbar-thumb {
+			width: 20%;
+		}
+	}
+}
+@media screen and (max-width: 980px) {
+	.dream-big {
+		.dream-big-content {
+			display: grid;
+			img {
+				width: 100%;
+			}
+			grid-template-columns: 1fr;
+			gap: $size-1;
+			.dream-big-banner {
+				overflow: hidden;
+			}
+		}
+	}
+}

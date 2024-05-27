@@ -4,5 +4,9 @@
 	},
 	"cSpell.words": [
 		"Traumatología"
-	]
+	],
+	"[javascript]": {
+		"javascript.preferences.quoteStyle": "single",
+	},
+	"prettier.semi": false,
 }
