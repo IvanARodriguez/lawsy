@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<link rel="icon" type="image/x-icon" href="imgs/favicon/favicon.ico" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/imgs/favicon/favicon.ico" />
 		<meta
 			name="description"
 			content="Los expertos en servicios migratorios mas confiables de Republica Dominicana"
@@ -18,50 +18,82 @@
 				<nav class="nav">
 					<menu class="sidebar">
 						<li onclick="hideSidebar()">
-							<a href="#"
-								><svg
+							<a href="#">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									height="30px"
 									viewBox="0 -960 960 960"
 									width="30px"
-									fill="inherit"
+									fill="#fff"
 								>
 									<path
 										d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
-									/></svg
-							></a>
+									/>
+								</svg>
+							</a>
 						</li>
 						<li><a href="/">Inicio</a></li>
-						<li class="selected-page">
-							<a href="/pages/acerca.html">Acerca</a>
+						<li><a href="/acerca" class="selected-page">Acerca</a></li>
+						<li class="dropdown" id="dropdown">
+							<a href="#" onclick="collapseMenu()">
+								Servicios
+								<span class="chevron"></span>
+							</a>
+							<ul class="service-submenu" id="service-submenu">
+								<li><a href="/congresos">Congresos</a></li>
+								<li><a href="/dreambig">Dream Big</a></li>
+							</ul>
 						</li>
-						<li><a href="/pages/servicios.html">Servicios</a></li>
-						<li><a href="/pages/contacto.html">Contacto</a></li>
+						<li><a href="/contacto">Contacto</a></li>
 					</menu>
+					<!-- Desktop menu -->
 					<menu class="menu-items">
 						<li>
-							<a href="/"
-								><img
+							<a href="/">
+								<img
 									src="/assets/images/logo.webp"
 									alt="Lawsy Logo"
 									height="60"
-							/></a>
+								/>
+							</a>
 						</li>
 						<li class="hideOnMobile">
 							<a href="/">Inicio</a>
 						</li>
-						<li class="hideOnMobile">
-							<a href="/pages/acerca.html" class="selected-page">Acerca</a>
+						<li class="hideOnMobile selected-page">
+							<a href="/acerca">Acerca</a>
 						</li>
 						<li class="hideOnMobile">
-							<a href="/pages/servicios.html">Servicios</a>
+							<a href="#">Servicios <span class="chevron"></span></a>
+							<ul class="submenu">
+								<li>
+									<a href="/congresos"
+										><span
+											><img
+												src="/assets/icons/interpreter.svg"
+												alt="Interpreter icon"
+										/></span>
+										Congresos</a
+									>
+								</li>
+								<li>
+									<a href="/dreambig">
+										<span
+											><img
+												src="/assets/icons/baseball.svg"
+												alt="baseball icon"
+										/></span>
+										DreamBig</a
+									>
+								</li>
+							</ul>
 						</li>
 						<li class="hideOnMobile">
-							<a href="/pages/contacto.html">Contacto</a>
+							<a href="/contacto">Contacto</a>
 						</li>
 						<li class="menu-button" onclick="showSidebar()">
-							<a href="#"
-								><svg
+							<a href="#">
+								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									height="30px"
 									viewBox="0 -960 960 960"
@@ -70,8 +102,9 @@
 								>
 									<path
 										d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"
-									/></svg
-							></a>
+									/>
+								</svg>
+							</a>
 						</li>
 					</menu>
 				</nav>
@@ -79,9 +112,14 @@
 		</header>
 		<main class="container-fluid fade-in service-main">
 			<section class="container-fluid about-intro">
-				<div class="service-content container">
-					<h1>Acerca de nosotros</h1>
-					<div class="column">
+				<div class="service-content">
+					<img
+						src="/assets//images/passport.webp"
+						alt="Pasaportes"
+						class="passport"
+					/>
+					<div class="main-banner-about">
+						<h1>Acerca de nosotros</h1>
 						<p>
 							Lawsy Servicios Globales es orgulloso de ser los mas confiados en
 							la gestión de viajes internacionales y asesoramiento migratorio.
@@ -91,42 +129,44 @@
 							confiables para aquellos que buscan explorar nuevos horizontes y
 							oportunidades.
 						</p>
+					</div>
+				</div>
+				<div class="experience container">
+					<h2>NUESTRA EXPERIENCIA</h2>
+					<div class="experience-content">
 						<p>
-							Con más de [X años] de experiencia en la industria, hemos ayudado
-							a más de 1000 solicitantes a obtener visas para una variedad de
+							Con más de 5 años de experiencia en la industria, hemos ayudado a
+							más de 10,000 solicitantes a obtener visas para una variedad de
 							destinos, con un impresionante índice de aprobación de hasta el
 							95%. Nuestro compromiso con la excelencia y la satisfacción del
 							cliente nos ha convertido en el socio preferido para aquellos que
 							buscan una experiencia de viaje sin complicaciones y una
 							orientación sólida.
 						</p>
+						<p>
+							En Lawsy Servicios Globales, creemos en la importancia de la
+							atención personalizada y el enfoque individualizado para cada
+							cliente. Nuestro equipo de expertos está dedicado a brindar un
+							servicio excepcional, desde la consulta inicial hasta la
+							finalización exitosa del proceso.
+						</p>
+						<p>
+							Además de nuestros servicios de visa líderes en la industria,
+							también ofrecemos una amplia gama de servicios migratorios, que
+							van desde la asesoría migratoria hasta la traducción de
+							documentos.
+						</p>
+						<p>
+							Únete a la familia Lawsy Servicios Globales y descubre una nueva
+							forma de viajar y resolver problemas migratorios. Estamos aquí
+							para ayudarte a hacer realidad tus sueños, sin importar a dónde te
+							lleve el camino.
+						</p>
 					</div>
-					<p>
-						En Lawsy Servicios Globales, creemos en la importancia de la
-						atención personalizada y el enfoque individualizado para cada
-						cliente. Nuestro equipo de expertos está dedicado a brindar un
-						servicio excepcional, desde la consulta inicial hasta la
-						finalización exitosa del proceso.
-					</p>
-					<p>
-						Además de nuestros servicios de visa líderes en la industria,
-						también ofrecemos una amplia gama de servicios migratorios, que van
-						desde la asesoría migratoria hasta la traducción de documentos.
-					</p>
-					<p>
-						Únete a la familia Lawsy Servicios Globales y descubre una nueva
-						forma de viajar y resolver problemas migratorios. Estamos aquí para
-						ayudarte a hacer realidad tus sueños, sin importar a dónde te lleve
-						el camino.
-					</p>
 				</div>
 			</section>
 			<section class="mission container">
 				<div class="intro">
-					<img
-						src="/assets/images/traveler.webp"
-						alt="Lawsy Servicios Globales"
-					/>
 					<div class="intro-content">
 						<h2>NUESTRA MISIÓN</h2>
 						<p>
@@ -136,8 +176,8 @@
 						</p>
 					</div>
 				</div>
-
 				<div class="mission-content">
+					<div class="mission-main"></div>
 					<ul>
 						<li>
 							<h3>Facilitar Experiencias de Viaje Sin Complicaciones</h3>
@@ -204,5 +244,73 @@
 				</div>
 			</section>
 		</main>
+		<footer>
+			<div class="footer_info container">
+				<div class="logo-footer">
+					<img
+						class="logo"
+						src="/assets/images/logo.webp"
+						height="100px"
+						alt="Lawsy Logo"
+					/>
+					<div class="main_social">
+						<a href="https://wa.me/message/YUVWBEXURGCOJ1">
+							<img
+								src="/assets/icons/Facebook_Logo_Secondary.png"
+								alt="whatsapp icon"
+								height="24px"
+							/>
+						</a>
+						<a href="https://www.instagram.com/lawsy_sg/?hl=es">
+							<img
+								src="/assets/icons/Instagram_Glyph_White.svg"
+								alt="instagram icon"
+								height="24px"
+							/>
+						</a>
+						<a href="tel:829-871-2080">
+							<img
+								src="/imgs/call-icon.svg"
+								alt="PHONE icon"
+								width="30"
+								height="30"
+							/>
+						</a>
+						<a href="mailto:w.rodriguez@lawsysg.com">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#e8eaed"
+							>
+								<path
+									d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="schedules">
+					<h3>Horario</h3>
+					<ul class="schedule">
+						<li>Lunes: 8 - 4</li>
+						<li>Martes: 8 - 4</li>
+						<li>Miércoles: 8 - 4</li>
+						<li>Jueves: 8 - 4</li>
+						<li>Viernes: 8 - 4</li>
+					</ul>
+				</div>
+				<div class="helful-links">
+					<h3>Enlaces de ayuda</h3>
+					<ul class="schedule">
+						<li><a href="/acerca">ACERCA</a></li>
+						<li><a href="/dreambig">DREAMBIG</a></li>
+						<li><a href="/congresos">CONGRESOS</a></li>
+						<li><a href="/contacto">CONTACTO</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

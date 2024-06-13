@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./css/main.css" />
-		<link rel="icon" type="image/x-icon" href="imgs/favicon/favicon.ico" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="/imgs/favicon/favicon.ico" />
 		<meta
 			name="description"
 			content="Los expertos en servicios migratorios mas confiables de Republica Dominicana"
@@ -32,9 +32,18 @@
 							></a>
 						</li>
 						<li class="selected-page"><a href="/">Inicio</a></li>
-						<li><a href="/pages/acerca.html">Acerca</a></li>
-						<li><a href="/pages/servicios.html">Servicios</a></li>
-						<li><a href="/pages/contacto.html">Contacto</a></li>
+						<li><a href="/acerca">Acerca</a></li>
+						<li class="dropdown" id="dropdown">
+							<a href="#" onclick="collapseMenu()">
+								Servicios
+								<span class="chevron"></span>
+							</a>
+							<ul class="service-submenu" id="service-submenu">
+								<li><a href="/congresos">Congresos</a></li>
+								<li><a href="/dreambig">Dream Big</a></li>
+							</ul>
+						</li>
+						<li><a href="/contacto">Contacto</a></li>
 					</menu>
 					<menu class="menu-items">
 						<li>
@@ -49,13 +58,35 @@
 							<a href="/">Inicio</a>
 						</li>
 						<li class="hideOnMobile">
-							<a href="/pages/acerca.html">Acerca</a>
+							<a href="/acerca">Acerca</a>
 						</li>
 						<li class="hideOnMobile">
-							<a href="/pages/servicios.html">Servicios</a>
+							<a href="#">Servicios</a>
+							<ul class="submenu">
+								<li>
+									<a href="/congresos"
+										><span
+											><img
+												src="/assets/icons/interpreter.svg"
+												alt="Interpreter icon"
+										/></span>
+										Congresos</a
+									>
+								</li>
+								<li>
+									<a href="/dreambig">
+										<span
+											><img
+												src="/assets/icons/baseball.svg"
+												alt="baseball icon"
+										/></span>
+										DreamBig</a
+									>
+								</li>
+							</ul>
 						</li>
 						<li class="hideOnMobile">
-							<a href="/pages/contacto.html">Contacto</a>
+							<a href="/contacto">Contacto</a>
 						</li>
 						<li class="menu-button" onclick="showSidebar()">
 							<a href="#"
@@ -713,7 +744,7 @@
 				<div class="container">
 					<div class="text">
 						<h2>Con éxito</h2>
-						<h3>Más De 1000 Visas aprobadas</h3>
+						<h3>Más De 10,000 Visas aprobadas</h3>
 						<p>
 							Tenemos un extenso periodo de servicio que nos permite abordar con
 							experiencia la mayoría de situaciones de los solicitantes,
@@ -721,260 +752,108 @@
 							de sus destinos.
 						</p>
 					</div>
-					<div class="service-features">
-						<div class="service_card">
-							<img src="imgs/turist.svg" alt="turist icon" />
-							<h3>Asistencia para congresos</h3>
-							<p>Viaja, explora y conoce tus destinos favoritos</p>
-							<a href="/servicios#congresos">explorar</a>
-						</div>
-						<div class="service_card">
-							<img src="imgs/work-icon.svg" alt="work icon" />
-							<h3>Visas para trabajar</h3>
-							<p>Trabaja legalmente mientras conoces lugares</p>
-						</div>
-						<div class="service_card">
-							<img src="imgs/student-icon.svg" alt="student icon" />
-							<h3>Visas de Estudios</h3>
-							<p>Mejora tu nivel académico en el exterior</p>
-						</div>
-						<div class="service_card">
-							<img src="imgs/fiancee.svg" alt="couple icon" />
-							<h3>Visas de Prometido</h3>
-							<p>Reúnete y cásate en el país de tu prometid@</p>
-						</div>
-					</div>
 				</div>
 			</section>
-			<section class="main-page-congress">
-				<div class="container">
-					<div class="alianza">
-						<img
-							src="/assets/images/jyl-lawsy-1.png"
-							alt="Lawsy y JYL asociación"
-							height="150"
-						/>
-						<h2>
-							En alianza con JYL Consultores, hemos facilitado la obtención de
-							visas a cientos de participantes en los siguientes congresos:
-						</h2>
-					</div>
-					<div class="congresses">
-						<div class="congress-card">
-							<img
-								src="/assets/images/woc-2024.png"
-								alt="WOC conference image"
-								height="80"
-							/>
-							<h3>Congreso internacional de oftalmología</h3>
-							<p>World Ophthalmology Congress</p>
-						</div>
-						<div class="congress-card">
-							<img
-								src="/assets/images/ilae-roma.png"
-								alt="ILAE Rome conference image"
-								height="80"
-							/>
-							<h3>Liga Internacional en Contra de la Epilepsia</h3>
-							<p>International League Against Epilepsy</p>
-						</div>
-						<div class="congress-card">
-							<img
-								src="/assets/images/ERS.png"
-								alt="ERS Vienna congress"
-								height="80"
-							/>
-							<h3>Sociedad Respiratoria Europea</h3>
-							<p>European Respiratory Society</p>
-						</div>
-						<div class="congress-card">
-							<img
-								src="/assets/images/seorl.png"
-								alt="ERS Vienna congress"
-								height="80"
-							/>
-							<h3>SEORL-CCC</h3>
-							<p>
-								Sociedad Española de Otorrinolaringología y Cirugía de Cabeza y
-								cuello
-							</p>
-						</div>
-						<div class="congress-card">
-							<img
-								src="/assets/images/separ.png"
-								alt="ERS Vienna congress"
-								height="80"
-							/>
-							<h3>SEPAR</h3>
-							<p>Sociedad Española de Neurología y Cirugía Torácica</p>
-						</div>
-						<div class="congress-card">
-							<img
-								src="/assets/images/secot.png"
-								alt="ERS Vienna congress"
-								height="80"
-							/>
-							<h3>SECOT</h3>
-							<p>Sociedad Española de Cirugía Ortopédica y Traumatología</p>
-						</div>
-					</div>
-					<div class="mas-detalle-btns">
-						<a href="/servicios#congresos" class="main-button">MAS DETALLES</a>
-						<a
-							target="_blank"
-							class="main-button white-variant"
-							href="https://wa.me/message/YUVWBEXURGCOJ1"
-						>
-							Contáctenos
-							<img
-								src="/assets/images/whatsapp-svgrepo-com.svg"
-								alt="whatsapp icon"
-								height="22"
-							/>
-						</a>
-					</div>
+			<section class="congress-banner">
+				<div class="congress-image">
+					<img src="/imgs/conference.webp" alt="Conferencia" />
+				</div>
+				<div class="congress-content">
+					<!-- <img src="/imgs/turist.svg" alt="turista icon" /> -->
+					<h2>Participa en las conferencias mas importantes del mundo</h2>
+					<h3>Asistencia para congresos</h3>
+					<p>
+						A través de nuestro servicio de visas para congresos, miles de
+						expertos en salud han viajado a distintos países y continentes para
+						asistir a una variedad de eventos en diversos campos médicos.
+					</p>
+					<a href="/congresos" class="main-button btn-reset"
+						>SERVICIOS PARA CONGRESOS</a
+					>
 				</div>
 			</section>
-			<section class="dream-big">
-				<div class="container">
-					<div class="dream-big-content">
-						<img
-							class="dream-big-banner"
-							src="/assets/images/dream-baseball.webp"
-							alt="baseball kid"
-						/>
-						<div class="dream-big-text">
-							<h2>En asociación con J&L Consultores</h2>
-							<h3>
-								Muchos estudiantes han logrado viajar, estudiar y practicar
-								deportes en el exterior
-							</h3>
-							<p>
-								En Lawsy apoyamos el desarrollo del país y los jóvenes
-								Dominicanos, es por eso que brindamos una asistencia
-								incomparable en la solicitud de visas de distintos países para
-								el proyecto.
-								<em>Dream Big</em>
-							</p>
-						</div>
-					</div>
-					<div class="slider-container">
-						<button id="prev-slide" class="slide-button">
-							<img
-								src="/assets/icons/chevron-left.svg"
-								alt="chevron left icon"
-							/>
-						</button>
-						<div class="image-list">
-							<img
-								class="image-item"
-								src="/assets/images/sport1.webp"
-								alt="Estudiante en Connors State College"
-							/>
-							<img
-								class="image-item"
-								src="/assets/images/sport2.webp"
-								alt="Dream Big deportista Ricardo Cuello"
-							/>
-							<img
-								class="image-item"
-								src="/assets/images/sport3.webp"
-								alt="Dream Big deportista Wally Diaz"
-							/>
-							<img
-								class="image-item"
-								src="/assets/images/sport4.webp"
-								alt="Mujer orgullosa con bandera Dominicana"
-							/>
-							<img
-								class="image-item"
-								src="/assets/images/sport5.webp"
-								alt="Dream Big estudiantes en Eastern Nazarene College"
-							/>
-							<img
-								class="image-item"
-								src="/assets/images/sport6.webp"
-								alt="Estudiantes en University of the Cumberlands"
-							/>
-						</div>
-						<button id="next-slide" class="slide-button">
-							<img
-								src="/assets/icons/chevron-right.svg"
-								alt="chevron left icon"
-							/>
-						</button>
-					</div>
-					<div class="slider-scrollbar">
-						<div class="scrollbar-track">
-							<div class="scrollbar-thumb"></div>
-						</div>
-					</div>
-				</div>
+			<section class="dream-big-main-banner">
+				<h2>DreamBig</h2>
+				<!-- <img src="/assets/images/kid-baseball.webp" height="467" alt="" /> -->
+				<p>
+					Con orgullo colaboramos con DreamBig para asistir a estudiantes y
+					deportistas en la obtención de la visa necesaria para explorar,
+					estudiar y crecer en distintos países.
+				</p>
+				<p>
+					Nuestros servicios especializados en la obtención de visas de
+					estudiantes simplifican el proceso de solicitud y adquisición para
+					varios países, especialmente Estados Unidos.
+				</p>
+				<a href="/dreambig" class="main-button-light">VER MAS</a>
 			</section>
 		</main>
 
 		<footer>
 			<div class="footer_info container">
-				<div class="map">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.896546388278!2d-69.8307944!3d18.4883447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf87174efd4983%3A0x4b72f55a95d7ab7c!2sLAWSY%20SOLUCIONES%20GLOBALES!5e0!3m2!1ses-419!2sdo!4v1687310497206!5m2!1ses-419!2sdo"
-						width="600"
-						height="450"
-						style="border: 0"
-						allowfullscreen=""
-						loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"
-					></iframe>
-					<p>
-						Plaza Tito, Local 3A: Calle 1ra, La Esperanza, Santo Domingo Este
-					</p>
+				<div class="logo-footer">
+					<img
+						class="logo"
+						src="/assets/images/logo.webp"
+						height="100px"
+						alt="Lawsy Logo"
+					/>
+					<div class="main_social">
+						<a href="https://wa.me/message/YUVWBEXURGCOJ1">
+							<img
+								src="/assets/icons/Facebook_Logo_Secondary.png"
+								alt="whatsapp icon"
+								height="24px"
+							/>
+						</a>
+						<a href="https://www.instagram.com/lawsy_sg/?hl=es">
+							<img
+								src="/assets/icons/Instagram_Glyph_White.svg"
+								alt="instagram icon"
+								height="24px"
+							/>
+						</a>
+						<a href="tel:829-871-2080">
+							<img
+								src="/imgs/call-icon.svg"
+								alt="PHONE icon"
+								width="30"
+								height="30"
+							/>
+						</a>
+						<a href="mailto:w.rodriguez@lawsysg.com">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								height="24px"
+								viewBox="0 -960 960 960"
+								width="24px"
+								fill="#e8eaed"
+							>
+								<path
+									d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
+								/>
+							</svg>
+						</a>
+					</div>
 				</div>
-				<div>
+				<div class="schedules">
 					<h3>Horario</h3>
-					<ul>
-						<li>Lunes: 8:00 am - 4:00 pm</li>
-						<li>Martes: 8:00 am - 4:00 pm</li>
-						<li>Miércoles: 8:00 am - 4:00 pm</li>
-						<li>Jueves: 8:00 am - 4:00 pm</li>
-						<li>Viernes: 8:00 am - 4:00 pm</li>
+					<ul class="schedule">
+						<li>Lunes: 8 - 4</li>
+						<li>Martes: 8 - 4</li>
+						<li>Miércoles: 8 - 4</li>
+						<li>Jueves: 8 - 4</li>
+						<li>Viernes: 8 - 4</li>
 					</ul>
 				</div>
-				<div>
-					<div>
-						<img
-							class="logo"
-							src="/assets/images/logo.webp"
-							height="100px"
-							alt="Lawsy Logo"
-						/>
-						<div class="main_social">
-							<a href="https://wa.me/message/YUVWBEXURGCOJ1">
-								<img src="imgs/whatsapp-icon.svg" alt="whatsapp icon" />
-							</a>
-							<a href="https://www.instagram.com/lawsy_sg/?hl=es">
-								<img src="imgs/instagram-icon.svg" alt="instagram icon" />
-							</a>
-							<a href="tel:829-871-2080">
-								<img src="imgs/call-icon.svg" alt="PHONE icon" />
-							</a>
-							<a href="mailto:w.rodriguez@lawsysg.com">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									height="24px"
-									viewBox="0 -960 960 960"
-									width="24px"
-									fill="#e8eaed"
-								>
-									<path
-										d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
-									/>
-								</svg>
-							</a>
-						</div>
-						<p id="trademark">
-							Lawsy Soluciones Globales &reg <span id="year"></span>
-						</p>
-					</div>
+				<div class="helful-links">
+					<h3>Enlaces de ayuda</h3>
+					<ul class="schedule">
+						<li><a href="/acerca">ACERCA</a></li>
+						<li><a href="/dreambig">DREAMBIG</a></li>
+						<li><a href="/congresos">CONGRESOS</a></li>
+						<li><a href="/contacto">CONTACTO</a></li>
+					</ul>
 				</div>
 			</div>
 		</footer>

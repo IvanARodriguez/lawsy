@@ -7,13 +7,17 @@ window.showBody = (country) => {
 
 	const selectedPanel = document.getElementById(country);
 
-	panels.forEach((p) => p.classList.remove('active'));
+	if(pins && selectedPin){
 
-	pins.forEach((p) => p.classList.remove('selected'));
+		panels.forEach((p) => p.classList.remove('active'));
+	
+		pins.forEach((p) => p.classList.remove('selected'));
+	
+		selectedPin.classList.add('selected');
+	
+		selectedPanel.classList.add('active');
+	}
 
-	selectedPin.classList.add('selected');
-
-	selectedPanel.classList.add('active');
 };
 
 showBody('usa');
