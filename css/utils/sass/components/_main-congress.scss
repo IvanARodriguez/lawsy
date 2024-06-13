@@ -1,8 +1,19 @@
 @import '../base/variables';
 
 .main-page-congress {
-  margin: $size-3 0 0;
-	color: white;
+  padding: 5rem $size-1;
+  margin-bottom: $size-3;
+  .container {
+    display: grid;
+    place-items: center;
+    color: white;
+    h2 {
+			font-weight: bold;
+      max-width: 600px;
+			font-size: 1.5rem;
+		}
+  }
+
 	padding: $size-2 $size-1 $size-3;
 	background: rgb(131, 58, 180);
 	background: linear-gradient(
@@ -11,26 +22,24 @@
 		rgb(156, 29, 253) 50%,
 		rgb(0, 43, 235) 100%,
 	);
-
+}
 	.container {
     .alianza {
       display: grid;
-     place-items: center;
+      place-items: center;
       gap: 1rem;
+      margin-bottom: $size-3;
     }
 		text-align: center;
 		display: grid;
 		gap: $size-1;
-		h2 {
-			font-weight: bold;
-			font-size: 1.5rem;
-		}
 		p {
 			max-width: 700px;
 			margin: 0 auto;
 			font-size: 1.3rem;
 		}
     .mas-detalle-btns{
+      margin-bottom: 5rem;
       .main-button{
         display: flex;
         gap: .5rem;
@@ -58,7 +67,7 @@
         }
         p{
           font-size: 1rem;
-          color: rgba(255, 255, 255, 0.821);
+          color: rgba(72, 72, 72, 0.821);
         }
         background: rgba(255, 255, 255, 0.2);
         border-radius: 16px;
@@ -71,23 +80,22 @@
       }
     }
 	}
-}
 @media screen and (max-width: 1008px) {
   .main-page-congress {
     margin: $size-3 0;
-    .container{
-      .congresses {
-        grid-template-columns: 1fr 1fr;
-      }
+  }
+  .container{
+    .congresses {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
 @media screen and (max-width: 640px) {
   .main-page-congress {
-    .container{
-      .congresses {
-        grid-template-columns: 1fr;
-      }
+  }
+  .container{
+    .congresses {
+      grid-template-columns: 1fr;
     }
   }
 }

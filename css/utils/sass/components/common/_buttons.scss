@@ -13,8 +13,25 @@
   opacity: 1;
   transition: opacity .2s ease-in-out;
 }
-.main-button:hover{
+.main-button-light{
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: .8rem 1.25rem;
+  color: black;
+  grid-column: span 2;
+  background-color: $main-color-light;
+  border-radius: .5rem;
+  text-align: center;
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+.main-button:hover, .main-button-light:hover{
   opacity: .7;
+}
+
+.btn-reset{
+  margin: 0;
 }
 
 @media screen and (max-width: 950px) {

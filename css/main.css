@@ -81,7 +81,35 @@ button {
   color: white !important;
 }
 .header .container-fluid .nav li {
+  position: relative;
   height: 50px;
+}
+.header .container-fluid .nav li:hover .submenu {
+  opacity: 1;
+  transform: translateY(0);
+}
+.header .container-fluid .nav li .submenu {
+  display: grid;
+  text-align: start;
+  justify-content: start;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(-150%);
+  transition: opacity 0.3s ease-in-out;
+  top: 48px;
+  background-color: rgb(27, 28, 30);
+  border-radius: 0.3rem;
+  z-index: 600;
+  color: white;
+  position: absolute;
+  height: fit-content;
+}
+.header .container-fluid .nav li .submenu a {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+.header .container-fluid .nav li .submenu span {
+  margin-right: 0.5rem;
 }
 .header .container-fluid .nav li a {
   height: 100%;
@@ -106,18 +134,51 @@ button {
   z-index: 999;
   background-color: rgb(33, 31, 31);
   color: white;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
+.header .container-fluid .nav .sidebar a {
+  min-height: 50px;
+}
+.header .container-fluid .nav .sidebar .dropdown {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+}
+.header .container-fluid .nav .sidebar .dropdown .service-submenu {
+  display: none;
+  width: 100%;
+}
+.header .container-fluid .nav .sidebar .dropdown .service-submenu li a {
+  display: flex;
+  padding-left: 3rem;
+  width: 100%;
+}
+.header .container-fluid .nav .sidebar .dropdown .service-submenu.open {
+  display: block;
+}
+.header .container-fluid .nav .sidebar .dropdown .chevron {
+  transition: transform 0.3s ease-in-out;
+  background-image: url("/imgs/chevron.svg");
+  background-position: center;
+  background-size: cover;
+  transform: rotate(180deg);
+  color: white;
+  width: 24px;
+  height: 24px;
+}
 .header .container-fluid .nav .sidebar li {
   width: 100%;
 }
 .header .container-fluid .nav .sidebar li a {
+  display: flex;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -140,8 +201,8 @@ button {
 }
 footer {
   background-color: #1a1d23;
+  padding: 4rem 1rem;
   color: white;
-  padding: 1rem;
 }
 footer .main_social img {
   width: 30px;
@@ -149,26 +210,52 @@ footer .main_social img {
   transition: opacity 0.1s ease-in-out;
 }
 footer .footer_info {
+  text-align: start;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: start;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-footer .map iframe {
-  height: 200px;
-  width: 200px;
-  border-radius: 0.5rem;
+footer .footer_info .logo-footer {
+  max-width: 420px;
 }
-footer .map p {
-  max-width: 300px;
+footer .footer_info .logo-footer img {
+  object-fit: contain;
+}
+footer .footer_info .logo-footer .logo {
+  max-width: 180px;
+  min-height: 180px;
+  object-fit: contain;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+footer .footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: start;
+}
+footer h3 {
+  margin-bottom: 2rem;
+  color: #4362f8;
+}
+footer ul {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 footer li {
   list-style: none;
+  text-align: start;
+}
+footer li a {
+  color: white;
+  text-decoration: underline;
 }
 
 .banner {
-  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1.25rem, 4vw, 1.25rem);
@@ -215,7 +302,6 @@ footer li {
   text-align: center;
 }
 .banner .container .world-map {
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   z-index: 8;
@@ -228,8 +314,7 @@ footer li {
   max-height: 700px;
   margin: 0 auto;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .banner .container .world-map .pin {
   background-color: #9a2626;
@@ -262,7 +347,6 @@ footer li {
   background: #2b2b2b;
   color: #fff;
   border-radius: 3rem;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 0.3rem 0.6rem;
   font-size: clamp(0.5rem, 1vw, 1.3rem);
@@ -368,6 +452,7 @@ footer li {
   position: relative;
   overflow-x: hidden;
   padding: 2rem 1rem;
+  text-align: start;
 }
 .services .container .service-content .panels {
   opacity: 0;
@@ -377,7 +462,6 @@ footer li {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1rem;
-  padding: 1rem;
   transition: left 0.5s ease-in-out;
 }
 .services .container .service-content .place-title {
@@ -393,10 +477,12 @@ footer li {
   width: 60px;
   height: 60px;
   border-radius: 10rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .services .container .service-content .l-panel {
+  font-size: clamp(1.25rem, 4vw, 1.25rem);
+  text-align: justify;
+  word-wrap: break-word;
   display: grid;
   gap: 1.25rem;
 }
@@ -435,10 +521,12 @@ footer li {
   }
   .services .container .service-content .panels .l-panel {
     max-width: 100%;
+    font-size: clamp(1.25rem, 4vw, 1.25rem);
   }
   .services .container .service-content .panels .r-panel {
     max-width: none;
     margin: 0;
+    font-size: clamp(1.25rem, 4vw, 1.25rem);
   }
 }
 @keyframes fade {
@@ -472,135 +560,154 @@ footer li {
   margin: 0 auto;
   text-align: center;
 }
-.milestone .container .service-features {
+
+.congress-banner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 1.25rem);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.25rem, 4vw, 1.25rem);
 }
-.milestone .container .service-features .service_card {
-  text-align: center;
+.congress-banner .congress-image {
+  width: 100%;
+  overflow: hidden;
 }
-.milestone .container .service-features .service_card img {
-  height: 80px;
-  width: 80px;
+.congress-banner .congress-image img {
+  max-width: 100%;
+  border-radius: 0.2rem;
+}
+.congress-banner .congress-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.congress-banner .congress-content img {
+  height: 30px;
+}
+.congress-banner .congress-content h2 {
+  font-size: 1.7rem;
+  color: #4362f8;
+}
+.congress-banner .congress-content h3 {
+  font-size: 1.9rem;
+}
+.congress-banner .congress-content p {
+  text-align: justify;
 }
 
-@media screen and (max-width: 720px) {
-  .milestone {
-    margin: auto;
-  }
-  .milestone .container .service-features {
-    grid-template-columns: 1fr 1fr;
-  }
-  .milestone .container .service-features .service_card img {
-    height: 40px;
-    width: 40px;
-  }
-}
-@media screen and (max-width: 470px) {
-  .milestone {
-    margin: auto;
-  }
-  .milestone .container .service-features {
-    grid-template-columns: 1fr;
-  }
-  .milestone .container .service-features .service_card img {
-    height: 40px;
-    width: 40px;
+@media screen and (max-width: 790px) {
+  .congress-banner {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .wave {
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  --size: 50px;
+  mask: radial-gradient(var(--size) at 50% 0%, rgba(0, 0, 0, 0) 99%, red 101%) 50% var(--size)/calc(4 * var(--size)) 100% repeat-x;
 }
 
 .service-main {
+  text-align: justify;
+  word-break: break-all;
   display: grid;
 }
-.service-main .about-intro {
-  background: rgba(216, 216, 216, 0.391);
-}
 .service-main .service-content {
-  animation: fadeIn liner both;
+  background-color: #21d4fd;
+  border-bottom-left-radius: 50% 80px;
+  border-bottom-right-radius: 50% 80px;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 1rem;
+  color: white;
+}
+.service-main .service-content img {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.193);
 }
 .service-main .service-content p {
+  max-width: 700px;
+  text-align: justify;
   line-height: 1.6;
-  color: #555;
-  animation-timeline: view(35%);
   padding-bottom: 1rem;
 }
 .service-main .service-content h1 {
-  text-align: center;
   font-size: clamp(1.25rem, 4vw, 4.25rem);
   margin-bottom: 2rem;
-  color: #333;
-  width: -moz-fit-content;
   width: fit-content;
-  border-bottom: 3px groove #4362f8;
+  font-weight: bold;
+}
+.service-main .experience {
+  padding: 4rem 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: start;
+}
+.service-main .experience .experience-content {
+  display: grid;
+  gap: 1rem;
+}
+.service-main .experience h2 {
+  font-size: clamp(1.25rem, 4vw, 2.25rem);
+}
+.service-main .experience p {
+  text-align: justify;
+  max-width: none;
+}
+.service-main .mission {
+  padding: 1rem;
+  text-align: left;
+}
+.service-main .mission p {
+  max-width: none;
 }
 .service-main .mission .intro {
-  background-color: #1e1e1e;
   border-radius: 1rem;
-  color: beige;
-  display: flex;
-  place-content: center;
-  place-items: center;
-  flex-wrap: wrap;
-  margin: 2rem 0;
 }
 .service-main .mission .intro img {
-  max-width: 300px;
-  position: relative;
-}
-.service-main .mission .intro img:before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  height: 100%;
   width: 100%;
-  border: 3px solid red;
-}
-.service-main .mission .intro .intro-content {
-  text-align: center;
-  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.325);
+  position: relative;
 }
 .service-main .mission .intro .intro-content h2 {
   font-size: clamp(1.25rem, 4vw, 2.25rem);
+  width: 100%;
 }
 .service-main .mission .intro .intro-content p {
   font-size: 1.2rem;
+  max-width: none;
 }
 .service-main .mission .mission-content ul {
   display: grid;
   gap: 1rem;
   padding: 1rem 0;
 }
+.service-main .mission .mission-content ul li {
+  list-style-type: disc;
+}
+.service-main .mission .mission-content ul li h3 {
+  font-weight: bold;
+}
 .service-main .mission .mission-content ul li p {
   margin-left: 2rem;
+  max-width: none;
 }
 
-/* Animación */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media screen and (max-width: 1020px) {
+  .service-main .service-content {
+    grid-template-columns: 1fr;
+    justify-content: center;
   }
 }
-.fade-in {
-  animation: fadeIn 1s ease-out;
-}
-
 /* Estilos para dispositivos pequeños */
-@media only screen and (max-width: 600px) {
-  .service-main .container {
-    margin: 20px;
-    padding: 10px;
-  }
-}
 /* Estilos para la imagen */
 .image-container {
   text-align: center;
@@ -614,55 +721,63 @@ footer li {
 }
 
 .main-page-congress {
-  margin: clamp(1.25rem, 4vw, 4.25rem) 0 0;
-  color: white;
+  padding: 5rem clamp(1.25rem, 4vw, 1.25rem);
+  margin-bottom: clamp(1.25rem, 4vw, 4.25rem);
   padding: clamp(1.25rem, 4vw, 2.25rem) clamp(1.25rem, 4vw, 1.25rem) clamp(1.25rem, 4vw, 4.25rem);
   background: rgb(131, 58, 180);
   background: linear-gradient(90deg, rgb(58, 123, 180) 0%, rgb(156, 29, 253) 50%, rgb(0, 43, 235) 100%);
 }
 .main-page-congress .container {
+  display: grid;
+  place-items: center;
+  color: white;
+}
+.main-page-congress .container h2 {
+  font-weight: bold;
+  max-width: 600px;
+  font-size: 1.5rem;
+}
+
+.container {
   text-align: center;
   display: grid;
   gap: clamp(1.25rem, 4vw, 1.25rem);
 }
-.main-page-congress .container .alianza {
+.container .alianza {
   display: grid;
   place-items: center;
   gap: 1rem;
+  margin-bottom: clamp(1.25rem, 4vw, 4.25rem);
 }
-.main-page-congress .container h2 {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-.main-page-congress .container p {
+.container p {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.3rem;
 }
-.main-page-congress .container .mas-detalle-btns {
+.container .mas-detalle-btns {
+  margin-bottom: 5rem;
   display: flex;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-.main-page-congress .container .mas-detalle-btns .main-button {
+.container .mas-detalle-btns .main-button {
   display: flex;
   gap: 0.5rem;
   width: 100%;
 }
-.main-page-congress .container .mas-detalle-btns .white-variant {
+.container .mas-detalle-btns .white-variant {
   background-color: white;
   color: #000;
 }
-.main-page-congress .container .congresses {
+.container .congresses {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
 }
-.main-page-congress .container .congresses .congress-card {
+.container .congresses .congress-card {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -672,25 +787,25 @@ footer li {
   padding: 0.5rem;
   border-radius: 0.3rem;
 }
-.main-page-congress .container .congresses .congress-card img {
+.container .congresses .congress-card img {
   background-color: white;
   border-radius: 0.5rem;
 }
-.main-page-congress .container .congresses .congress-card p {
+.container .congresses .congress-card p {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.821);
+  color: rgba(72, 72, 72, 0.821);
 }
 
 @media screen and (max-width: 1008px) {
   .main-page-congress {
     margin: clamp(1.25rem, 4vw, 4.25rem) 0;
   }
-  .main-page-congress .container .congresses {
+  .container .congresses {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 640px) {
-  .main-page-congress .container .congresses {
+  .container .congresses {
     grid-template-columns: 1fr;
   }
 }
@@ -763,8 +878,7 @@ footer li {
   border-radius: 0.2rem;
   max-width: 340px;
   height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 2px 2px 5px grey;
 }
 .dream-big .container .slider-scrollbar {
@@ -836,9 +950,70 @@ footer li {
     overflow: hidden;
   }
 }
+.dream-big-main-banner {
+  background: linear-gradient(110deg, #9c3bfd 60%, #4bc0ff 60%);
+  position: relative;
+  min-height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dream-big-main-banner h2 {
+  font-size: clamp(1.25rem, 7vw, 6.25rem);
+  font-weight: bolder;
+  text-shadow: 0 0 3px #ff9500, 0 0 5px #0095ff;
+}
+.dream-big-main-banner p {
+  max-width: 840px;
+  font-size: clamp(1.25rem, 4vw, 1.25rem);
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.main-contact .hero {
+  color: aliceblue;
+  padding: 4rem 1rem;
+  background: #136a8a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #267871, #136a8a); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #267871, #136a8a);
+  display: grid;
+  gap: 3rem;
+}
+.main-contact .hero .main_social {
+  width: fit-content;
+  margin: 0 auto;
+  gap: 1rem;
+  display: inline-flex;
+}
+.main-contact .hero .contacts {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.main-contact .hero .contacts a {
+  color: inherit;
+  text-decoration: underline;
+}
+.main-contact .hero .intro {
+  text-align: center;
+}
+.main-contact .hero .intro h1 {
+  font-size: clamp(1.25rem, 4vw, 4.25rem);
+}
+.main-contact .hero .intro p {
+  font-size: clamp(1.25rem, 4vw, 2.25rem);
+}
+
 .main-button {
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   padding: 0.8rem 1.25rem;
@@ -851,12 +1026,32 @@ footer li {
   transition: opacity 0.2s ease-in-out;
 }
 
-.main-button:hover {
+.main-button-light {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.8rem 1.25rem;
+  color: black;
+  grid-column: span 2;
+  background-color: #e6eaff;
+  border-radius: 0.5rem;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.main-button:hover, .main-button-light:hover {
   opacity: 0.7;
+}
+
+.btn-reset {
+  margin: 0;
 }
 
 @media screen and (max-width: 950px) {
   .main-button {
     grid-column: span 1;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,74 +1,69 @@
 @import '../base/variables';
 
 .milestone {
-  margin: 5rem auto;
-  .container{
-    display: grid;
-    gap: 3rem;
-    .text{
-      h2 {
-        font-size: $size-1;
-        text-align: center;
-        color: $main-color;
-      }
-      h3{
-        font-size: $size-2;
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-      }
-      p{
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-      }
+	margin: 5rem auto;
+	.container {
+		display: grid;
+		gap: 3rem;
+		.text {
+			h2 {
+				font-size: $size-1;
+				text-align: center;
+				color: $main-color;
+			}
+			h3 {
+				font-size: $size-2;
+				max-width: 700px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			p {
+				max-width: 600px;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+}
+.congress-banner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: $size-1;
+	display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $size-1;
+  .congress-image{
+    width: 100%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      border-radius: .2rem;
     }
-    .service-features{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 1.5rem;
-      .service_card{
-        text-align: center;
-        img{
-          height: 80px;
-          width: 80px;
-        }
-      }
+  }
+  .congress-content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    img {
+      height: 30px;
     }
+    h2 {
+      font-size: 1.7rem;
+    color: $main-color;
+    }
+    h3 {
+      font-size: 1.9rem;
+    }
+    p {
+      text-align: justify;
+    }
+    
   }
 }
 
-@media screen and (max-width: 720px) {
-  .milestone{
-    margin: auto;
-    .container {
-      
-      .service-features{
-        grid-template-columns: 1fr 1fr;
-        .service_card {
-          img{
-            height: 40px;
-            width: 40px;
-          }
-        }
-      }
-    }
+@media screen and (max-width: 790px) {
+	.congress-banner {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-          @media screen and (max-width: 470px) {
-            .milestone{
-              margin: auto;
-              .container {
-          
-                .service-features{
-                  grid-template-columns: 1fr;
-                  .service_card {
-                    img{
-                      height: 40px;
-                      width: 40px;
-                    }
-                  }
-                }
-              }
-            }
-          }
+

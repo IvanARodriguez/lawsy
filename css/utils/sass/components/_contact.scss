@@ -1,0 +1,50 @@
+@import '../base/variables';
+
+.main-contact {
+	.hero {
+		color: aliceblue;
+		padding: 4rem 1rem;
+		background: #136a8a; /* fallback for old browsers */
+		background: -webkit-linear-gradient(
+			to right,
+			#267871,
+			#136a8a
+		); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(
+			to right,
+			#267871,
+			#136a8a
+		);
+		display: grid;
+		gap: 3rem;
+		.main_social {
+			width: fit-content;
+			margin: 0 auto;
+			gap: 1rem;
+			display: inline-flex;
+		}
+		.contacts {
+			display: flex;
+			gap: 1rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			a {
+				color: inherit;
+				text-decoration: underline;
+			}
+			address {
+			}
+		}
+		.intro {
+			text-align: center;
+			h1 {
+				font-size: $size-3;
+			}
+			p {
+				font-size: $size-2;
+			}
+		}
+	}
+}

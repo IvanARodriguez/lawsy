@@ -18,7 +18,6 @@
 				display: grid;
 				grid-template-columns: 1fr auto;
 				gap: 1rem;
-				padding: 1rem;
 				transition: left 0.5s ease-in-out;
 			}
 			.place-title {
@@ -36,7 +35,11 @@
 					object-fit: cover;
 				}
 			}
+			text-align: start;
 			.l-panel {
+				font-size: $size-1;
+				text-align: justify;
+				word-wrap: break-word;
 				display: grid;
 				gap: 1.25rem;
 			}
@@ -81,10 +84,12 @@
             }
 					.l-panel {
 						max-width: 100%;
+						font-size: $size-1;
 					}
 					.r-panel {
 						max-width: none;
 						margin: 0;
+						font-size: $size-1;
 					}
 				}
 			}
