@@ -13,7 +13,7 @@
   flex-direction: column;
   gap: 1rem;
 	h2 {
-		font-size: $size-5;
+		font-size: $size-4;
 		font-weight: bolder;
 		text-shadow: 0 0 3px #ff9500, 0 0 5px #0095ff;
 	}
@@ -21,7 +21,6 @@
 		max-width: 840px;
 		font-size: $size-1;
 		margin: 0 auto;
-		text-align: justify;
 	}
 }
 
