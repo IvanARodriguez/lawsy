@@ -481,16 +481,11 @@ footer li a {
 }
 .services .container .service-content .l-panel {
   font-size: clamp(1.25rem, 4vw, 1.25rem);
-  text-align: justify;
-  word-wrap: break-word;
   display: grid;
   gap: 1.25rem;
 }
 .services .container .service-content .r-panel {
   max-width: 500px;
-}
-.services .container .service-content .r-panel .service-description {
-  text-align: justify;
 }
 .services .container .service-content .r-panel ul {
   display: grid;
@@ -592,9 +587,6 @@ footer li a {
 .congress-banner .congress-content h3 {
   font-size: 1.9rem;
 }
-.congress-banner .congress-content p {
-  text-align: justify;
-}
 
 @media screen and (max-width: 790px) {
   .congress-banner {
@@ -607,8 +599,6 @@ footer li a {
 }
 
 .service-main {
-  text-align: justify;
-  word-break: break-all;
   display: grid;
 }
 .service-main .service-content {
@@ -634,7 +624,6 @@ footer li a {
 }
 .service-main .service-content p {
   max-width: 700px;
-  text-align: justify;
   line-height: 1.6;
   padding-bottom: 1rem;
 }
@@ -658,7 +647,6 @@ footer li a {
   font-size: clamp(1.25rem, 4vw, 2.25rem);
 }
 .service-main .experience p {
-  text-align: justify;
   max-width: none;
 }
 .service-main .mission {
@@ -964,7 +952,7 @@ footer li a {
   gap: 1rem;
 }
 .dream-big-main-banner h2 {
-  font-size: clamp(1.25rem, 7vw, 6.25rem);
+  font-size: clamp(1.25rem, 4vw, 5.25rem);
   font-weight: bolder;
   text-shadow: 0 0 3px #ff9500, 0 0 5px #0095ff;
 }
@@ -972,11 +960,10 @@ footer li a {
   max-width: 840px;
   font-size: clamp(1.25rem, 4vw, 1.25rem);
   margin: 0 auto;
-  text-align: justify;
 }
 
 .main-contact .hero {
-  color: aliceblue;
+  color: white;
   padding: 4rem 1rem;
   background: #136a8a; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #267871, #136a8a); /* Chrome 10-25, Safari 5.1-6 */

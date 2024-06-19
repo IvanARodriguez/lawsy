@@ -38,16 +38,12 @@
 			text-align: start;
 			.l-panel {
 				font-size: $size-1;
-				text-align: justify;
-				word-wrap: break-word;
 				display: grid;
 				gap: 1.25rem;
 			}
 			.r-panel {
 				max-width: 500px;
-        .service-description{
-          text-align: justify;
-        }
+ 
 				ul {
 					display: grid;
 					gap: 0.5rem;
